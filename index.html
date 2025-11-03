@@ -1,126 +1,120 @@
 <!DOCTYPE html>
-<html lang="no">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Søkemotoroptimalisering – Grunnleggende SEO, tips og guider</title>
-    <meta name="description" content="Lær grunnleggende søkemotoroptimalisering (SEO). Artikler om HTML-struktur, CSS-layout, bildeoptimalisering og teknisk SEO.">
-    <link rel="canonical" href="https://itstud.hiof.no/~brukernavn/">
-    <link href="font/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <script>
-      function mobilMenu() {
-        const x = document.getElementById("ham");
-        x.style.display = (x.style.display === "block") ? "none" : "block";
-      }
-    </script>
+<html>
+	<head>
+		<link href="font/css/all.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<script>
+		function mobilMenu(){
+			var x = document.getElementById("ham");
 
-    <div id="grid-container">
-      <header id="page-header">
-        <h1>Søkemotoroptimalisering – lær SEO-grunnlaget</h1>
-      </header>
-
-      <nav aria-label="Hovedmeny">
-        <h2 class="visually-hidden">Navigasjon</h2>
-        <div class="logo">
-          <a href="/" title="Til forsiden">Logo / SEO-Blogg</a>
-        </div>
-        <i class="fas fa-hamburger" onclick="mobilMenu()" aria-label="Åpne meny"></i>
-        <ul id="ham" class="top-menu">
-          <li><a href="/om-oss.html">Om oss</a></li>
-          <li><a href="/tjenester.html">Våre tjenester</a></li>
-          <li><a href="/kontakt.html">Kontakt</a></li>
-
-          <!-- Dropdown -->
-          <li class="dropdown-point">
-            <a href="#">Oblig 1</a>
-            <ul class="dropdown-main">
-              <li><a href="/oblig1/html-skjema.html">HTML-skjema</a></li>
-              <li><a href="/oblig1/media-typer.html">Media-typer</a></li>
-              <li><a href="/oblig1/css-layout.html">CSS-layout</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-
-      <main id="main">
-        <section aria-labelledby="artikkeloversikt">
-          <h2 id="artikkeloversikt">Artikler om SEO</h2>
-
-          <article id="item-1" itemscope itemtype="https://schema.org/Article">
-            <header>
-              <h3 itemprop="headline">Hvordan strukturere HTML for bedre SEO</h3>
-            </header>
-            <img src="https://picsum.photos/400/400?1" alt="Eksempel på SEO-vennlig HTML-struktur" width="400" height="400" itemprop="image">
-            <p itemprop="description">
-              Lær hvorfor semantiske HTML-elementer hjelper søkemotorer å forstå innholdet ditt.
-            </p>
-            <a href="/artikler/html-struktur.html" itemprop="url">Les mer om HTML-struktur for SEO</a>
-          </article>
-
-          <article id="item-2" itemscope itemtype="https://schema.org/Article">
-            <header>
-              <h3 itemprop="headline">Bildeoptimalisering for nettsider</h3>
-            </header>
-            <img src="https://picsum.photos/400/400?2" alt="Eksempel på bildekomprimering" width="400" height="400" itemprop="image">
-            <p itemprop="description">
-              Optimaliser bilder for raskere lastetid og bedre synlighet i søk.
-            </p>
-            <a href="/artikler/bildeoptimalisering.html" itemprop="url">Les mer om bildeoptimalisering</a>
-          </article>
-
-          <article id="item-3" itemscope itemtype="https://schema.org/Article">
-            <header>
-              <h3 itemprop="headline">Teknisk SEO-sjekkliste</h3>
-            </header>
-            <img src="https://picsum.photos/400/400?3" alt="Illustrasjon av teknisk SEO-verktøy" width="400" height="400" itemprop="image">
-            <p itemprop="description">
-              Sjekkliste for struktur, sitemap, metadata og mobiltilpasning.
-            </p>
-            <a href="/artikler/teknisk-seo.html" itemprop="url">Les teknisk SEO-sjekkliste</a>
-          </article>
-        </section>
-      </main>
-
-      <aside id="aside">
-        <h2>Sideinnhold</h2>
-
-        <section id="video">
-          <h3>Introduksjonsvideo</h3>
-          <iframe width="300" height="169" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Kort introduksjon til SEO" loading="lazy"></iframe>
-        </section>
-
-        <section id="rel-article">
-          <h3>Relaterte artikler</h3>
-          <ul>
-            <li><a href="/artikler/innholdsstrategi.html">Innholdsstrategi for søk</a></li>
-            <li><a href="/artikler/nokkelord-analyse.html">Nøkkelordanalyse i praksis</a></li>
-            <li><a href="/artikler/linkbuilding.html">Hvordan bygge lenker</a></li>
-            <li><a href="/artikler/seo-feil.html">Vanlige SEO-feil</a></li>
-          </ul>
-        </section>
-
-        <section id="google-btn">
-          <a class="btn" href="https://www.google.com/search?q=søkemotoroptimalisering" target="_blank" rel="noopener noreferrer">Søk etter SEO på Google</a>
-        </section>
-      </aside>
-
-      <footer>
-        <p>© Webutvikling 2024 – <a href="/personvern.html">Personvern</a></p>
-      </footer>
-    </div>
-
-    <!-- Strukturert data (valgfritt, forbedrer SEO) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Søkemotoroptimalisering",
-      "url": "https://itstud.hiof.no/~brukernavn/"
-    }
-    </script>
-  </body>
+			if(x.style.display === "block"){
+				x.style.display = "none";
+			}
+			
+			else {
+				x.style.display= "block";
+			}
+		}
+		</script>
+	<div id="grid-container">
+		<header id="page-header">
+			<h1>Søkemotoroptimalisering</h1>
+		</header>
+		<nav>
+			<h1>Logo</h1>
+			<i class="fas fa-hamburger" onclick="mobilMenu()"></i>
+			<ul id="ham" class="top-menu">
+				<li><a>Link</a></li>
+				<li><a>Link</a></li>
+				<li><a>Link</a></li>
+				<!-- Her starter dropdown -->
+				<li class="dropdown-point"> 
+					<a>Oblig 1</a>
+					<ul class="dropdown-main">
+						<li><a>HTML-skjema</a></li>
+						<li><a>Media typer</a></li>
+						<li><a>CSS Layout</a></li>
+					</ul>
+				</li>
+				<!-- Her slutter dropdown -->
+	
+			</ul>
+		</nav>
+		<div id="main">
+			<article id="item-1">
+				<header>
+					<h1>Overskrift 1</h1>
+				</header>
+				<img src="https://picsum.photos/400/400">
+				<p>
+					If you break the rules, try to leave or lose the game, you will die. Just like Saaaaw. Oh, wow. That's an intense line of questioning, Snuffles I'll tell you how I feel about school, Jerry. It's a waste of time.
+				</p>
+				<a>Les mer</a>
+			</article>
+			<article id="item-2">
+				<header>
+					<h1>Overskrift 2</h1>
+				</header>
+				<img src="https://picsum.photos/400/400">
+				<p>
+					If you break the rules, try to leave or lose the game, you will die. Just like Saaaaw. Oh, wow. That's an intense line of questioning, Snuffles I'll tell you how I feel about school, Jerry. It's a waste of time.
+				</p>
+				<a>Les mer</a>
+			</article>
+			<article id="item-3">
+				<header>
+					<h1>Overskrift 3</h1>
+				</header>
+				<img src="https://picsum.photos/400/400">
+				<p>
+					If you break the rules, try to leave or lose the game, you will die. Just like Saaaaw. Oh, wow. That's an intense line of questioning, Snuffles I'll tell you how I feel about school, Jerry. It's a waste of time.
+				</p>
+				<a>Les mer</a>
+			</article>
+			<article>
+				<header>
+					<h1>Overskrift 1</h1>
+				</header>
+				<img src="https://picsum.photos/400/400">
+				<p>
+					If you break the rules, try to leave or lose the game, you will die. Just like Saaaaw. Oh, wow. That's an intense line of questioning, Snuffles I'll tell you how I feel about school, Jerry. It's a waste of time.
+				</p>
+				<a>Les mer</a>
+			</article>
+			<article>
+				<header>
+					<h1>Overskrift 2</h1>
+				</header>
+				<img src="https://picsum.photos/400/400">
+				<p>
+					If you break the rules, try to leave or lose the game, you will die. Just like Saaaaw. Oh, wow. That's an intense line of questioning, Snuffles I'll tell you how I feel about school, Jerry. It's a waste of time.
+				</p>
+				<a>Les mer</a>
+			</article>
+		</div>
+		<div id="aside">
+			<h1>Side innhold</h1>
+			<section id="video">
+			</section>
+			<section id="rel-article">
+				<ul>
+					<li><a>Link</a></li>
+					<li><a>Link</a></li>
+					<li><a>Link</a></li>
+					<li><a>Link</a></li>
+					<li><a>Link</a></li>
+				</ul>
+			</section>			
+			<section id="google-btn">
+				<a class="btn">Google</a>
+			</section>
+		</div>
+		<footer>
+			Webutvikling 2024
+		</footer>
+	</div>
+	</body>
 </html>
