@@ -1,120 +1,151 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link href="font/css/all.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-		<link rel="stylesheet" href="style.css">
-	</head>
-	<body>
-		<script>
-		function mobilMenu(){
-			var x = document.getElementById("ham");
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Søkemotoroptimalisering — Blogg om SEO, tips og guider</title>
+  <meta name="description" content="En enkel demo-side om søkemotoroptimalisering (SEO). Les artikler om HTML, CSS-layout, bildeoptimalisering og teknisk SEO.">
+  <link rel="canonical" href="https://yourdomain.example/index.html">
+  <!-- Fontawesome lokalt eller CDN (bytt sti ved behov) -->
+  <link href="font/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script>
+    // Enkelt tilgjengelig mobilmeny: bruker ARIA og progressive enhancement.
+    function mobilMenu(){
+      var x = document.getElementById("ham");
+      var btn = document.getElementById("hambtn");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+        btn.setAttribute("aria-expanded","false");
+      } else {
+        x.style.display = "block";
+        btn.setAttribute("aria-expanded","true");
+      }
+    }
+  </script>
 
-			if(x.style.display === "block"){
-				x.style.display = "none";
-			}
-			
-			else {
-				x.style.display= "block";
-			}
-		}
-		</script>
-	<div id="grid-container">
-		<header id="page-header">
-			<h1>Søkemotoroptimalisering</h1>
-		</header>
-		<nav>
-			<h1>Logo</h1>
-			<i class="fas fa-hamburger" onclick="mobilMenu()"></i>
-			<ul id="ham" class="top-menu">
-				<li><a>Link</a></li>
-				<li><a>Link</a></li>
-				<li><a>Link</a></li>
-				<!-- Her starter dropdown -->
-				<li class="dropdown-point"> 
-					<a>Oblig 1</a>
-					<ul class="dropdown-main">
-						<li><a>HTML-skjema</a></li>
-						<li><a>Media typer</a></li>
-						<li><a>CSS Layout</a></li>
-					</ul>
-				</li>
-				<!-- Her slutter dropdown -->
-	
-			</ul>
-		</nav>
-		<div id="main">
-			<article id="item-1">
-				<header>
-					<h1>Overskrift 1</h1>
-				</header>
-				<img src="https://picsum.photos/400/400">
-				<p>
-					If you break the rules, try to leave or lose the game, you will die. Just like Saaaaw. Oh, wow. That's an intense line of questioning, Snuffles I'll tell you how I feel about school, Jerry. It's a waste of time.
-				</p>
-				<a>Les mer</a>
-			</article>
-			<article id="item-2">
-				<header>
-					<h1>Overskrift 2</h1>
-				</header>
-				<img src="https://picsum.photos/400/400">
-				<p>
-					If you break the rules, try to leave or lose the game, you will die. Just like Saaaaw. Oh, wow. That's an intense line of questioning, Snuffles I'll tell you how I feel about school, Jerry. It's a waste of time.
-				</p>
-				<a>Les mer</a>
-			</article>
-			<article id="item-3">
-				<header>
-					<h1>Overskrift 3</h1>
-				</header>
-				<img src="https://picsum.photos/400/400">
-				<p>
-					If you break the rules, try to leave or lose the game, you will die. Just like Saaaaw. Oh, wow. That's an intense line of questioning, Snuffles I'll tell you how I feel about school, Jerry. It's a waste of time.
-				</p>
-				<a>Les mer</a>
-			</article>
-			<article>
-				<header>
-					<h1>Overskrift 1</h1>
-				</header>
-				<img src="https://picsum.photos/400/400">
-				<p>
-					If you break the rules, try to leave or lose the game, you will die. Just like Saaaaw. Oh, wow. That's an intense line of questioning, Snuffles I'll tell you how I feel about school, Jerry. It's a waste of time.
-				</p>
-				<a>Les mer</a>
-			</article>
-			<article>
-				<header>
-					<h1>Overskrift 2</h1>
-				</header>
-				<img src="https://picsum.photos/400/400">
-				<p>
-					If you break the rules, try to leave or lose the game, you will die. Just like Saaaaw. Oh, wow. That's an intense line of questioning, Snuffles I'll tell you how I feel about school, Jerry. It's a waste of time.
-				</p>
-				<a>Les mer</a>
-			</article>
-		</div>
-		<div id="aside">
-			<h1>Side innhold</h1>
-			<section id="video">
-			</section>
-			<section id="rel-article">
-				<ul>
-					<li><a>Link</a></li>
-					<li><a>Link</a></li>
-					<li><a>Link</a></li>
-					<li><a>Link</a></li>
-					<li><a>Link</a></li>
-				</ul>
-			</section>			
-			<section id="google-btn">
-				<a class="btn">Google</a>
-			</section>
-		</div>
-		<footer>
-			Webutvikling 2024
-		</footer>
-	</div>
-	</body>
+  <div id="grid-container">
+    <header id="page-header" role="banner">
+      <!-- Kun én hoved-h1 for siden -->
+      <h1>Søkemotoroptimalisering — Grunnleggende SEO-guider</h1>
+      <p class="lede">Tips og korte guider for bedre synlighet i søkemotorer.</p>
+    </header>
+
+    <nav role="navigation" aria-label="Hovedmeny">
+      <div class="brand">
+        <a href="/" title="Til forsiden">Søke-SEO</a>
+      </div>
+
+      <!-- Hamburger knapp med ARIA -->
+      <button id="hambtn" class="hamburger" aria-controls="ham" aria-expanded="false" onclick="mobilMenu()" aria-label="Åpne meny">
+        <i class="fas fa-hamburger" aria-hidden="true"></i>
+      </button>
+
+      <ul id="ham" class="top-menu" style="display:none">
+        <li><a href="/om-oss.html">Om oss</a></li>
+        <li><a href="/tjenester.html">Tjenester</a></li>
+        <li><a href="/kontakt.html">Kontakt</a></li>
+
+        <!-- Dropdown struktur: bruk knapp for tilgjengelighet -->
+        <li class="dropdown-point">
+          <button aria-expanded="false" aria-controls="oblig1-sub">Oblig 1</button>
+          <ul id="oblig1-sub" class="dropdown-main">
+            <li><a href="/oblig1/html-skjema.html">HTML-skjema: Bedre forms</a></li>
+            <li><a href="/oblig1/media-typer.html">Media typer: optimalisering</a></li>
+            <li><a href="/oblig1/css-layout.html">CSS Layout: Responsiv design</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <main id="main" role="main">
+      <!-- Seksjon for artikkel-liste -->
+      <section aria-labelledby="artikler-tittel">
+        <h2 id="artikler-tittel">Nyeste artikler</h2>
+
+        <article id="item-1" class="card" itemscope itemtype="http://schema.org/Article">
+          <header>
+            <h3 itemprop="headline">Hvordan strukturere HTML for SEO</h3>
+            <p class="meta">Publisert: <time datetime="2024-10-01" itemprop="datePublished">1. oktober 2024</time></p>
+          </header>
+          <figure>
+            <img src="https://picsum.photos/400/400?1" alt="Eksempel på sideoppsett for SEO" width="400" height="400" itemprop="image">
+            <figcaption>Sideoppsett med tydelig semantikk.</figcaption>
+          </figure>
+          <p itemprop="description">En kort introduksjon til hvordan semantiske HTML-elementer hjelper søkemotorer med å forstå innholdet ditt.</p>
+          <a href="/artikler/struktur-html-seo.html" class="read-more" itemprop="url">Les artikkelen: Strukturere HTML for SEO</a>
+        </article>
+
+        <article id="item-2" class="card" itemscope itemtype="http://schema.org/Article">
+          <header>
+            <h3 itemprop="headline">Bildeoptimalisering — alt, størrelse og format</h3>
+            <p class="meta">Publisert: <time datetime="2024-09-15" itemprop="datePublished">15. september 2024</time></p>
+          </header>
+          <figure>
+            <img src="https://picsum.photos/400/400?2" alt="Optimaliserte bilder for web" width="400" height="400" itemprop="image">
+            <figcaption>Bruk riktige alt-tekster og moderne formater.</figcaption>
+          </figure>
+          <p itemprop="description">Gode rutiner for å komprimere og beskrive bilder som forbedrer lastetid og søkbarhet.</p>
+          <a href="/artikler/bildeoptimalisering.html" class="read-more" itemprop="url">Les: Bildeoptimalisering</a>
+        </article>
+
+        <article id="item-3" class="card" itemscope itemtype="http://schema.org/Article">
+          <header>
+            <h3 itemprop="headline">Teknisk SEO-sjekkliste</h3>
+            <p class="meta">Publisert: <time datetime="2024-08-05" itemprop="datePublished">5. august 2024</time></p>
+          </header>
+          <figure>
+            <img src="https://picsum.photos/400/400?3" alt="Teknisk SEO gjennomgang" width="400" height="400" itemprop="image">
+            <figcaption>Kontroller robots.txt, sitemap og canonical.</figcaption>
+          </figure>
+          <p itemprop="description">Kort gjennomgang av de viktigste tekniske kontrollpunktene for nettsider.</p>
+          <a href="/artikler/teknisk-seo-sjekk.html" class="read-more" itemprop="url">Les: Teknisk SEO-sjekk</a>
+        </article>
+
+      </section>
+
+      <!-- Flere artikler kan listes her -->
+    </main>
+
+    <aside id="aside" role="complementary">
+      <h2>Sideinnhold</h2>
+      <section id="video">
+        <h3>Introduksjonsvideo</h3>
+        <!-- Eg. embedlet YouTube med title og iframe-title -->
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Introduksjon til SEO" width="300" height="169" loading="lazy"></iframe>
+      </section>
+
+      <section id="rel-article">
+        <h3>Relaterte artikler</h3>
+        <ul>
+          <li><a href="/artikler/struktur-html-seo.html">Strukturere HTML for SEO</a></li>
+          <li><a href="/artikler/bildeoptimalisering.html">Bildeoptimalisering</a></li>
+          <li><a href="/artikler/teknisk-seo-sjekk.html">Teknisk SEO-sjekk</a></li>
+          <li><a href="/artikler/innholdsstrategi.html">Innholdsstrategi for søk</a></li>
+        </ul>
+      </section>
+
+      <section id="google-btn">
+        <a class="btn" href="https://www.google.com/search?q=søkemotoroptimalisering" target="_blank" rel="noopener noreferrer">Søk etter SEO på Google</a>
+      </section>
+    </aside>
+
+    <footer role="contentinfo">
+      <p>© Webutvikling 2024 — <a href="/personvern.html">Personvern</a> | <a href="/kontakt.html">Kontakt</a></p>
+    </footer>
+  </div>
+
+  <!-- Valgfritt: en liten JSON-LD for siden (kan kombineres med microdata) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Søkemotoroptimalisering — SEO guider",
+    "url": "https://yourdomain.example/"
+  }
+  </script>
+</body>
 </html>
